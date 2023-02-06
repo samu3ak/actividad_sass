@@ -3,10 +3,11 @@
   font-family: monospace; }
 
 h1 {
-  text-align: center; }
+  text-align: center;
+  font-size: 32px; }
 
 p {
-  font-size: 18px; }
+  font-size: 22px; }
 
 body {
   background-color: #868686; }
@@ -28,6 +29,16 @@ header {
     border: 2px solid black;
     padding: 30px;
     text-align: center; }
+    .container div .alertBox {
+      background-color: #ff4040;
+      color: #f9fd16;
+      border: 2px solid black;
+      padding: 20px;
+      margin: 10px;
+      font-weight: bold;
+      margin-top: 50px; }
+      .container div .alertBox p {
+        font-size: 18px; }
     .container div h1 {
       padding-bottom: 50px; }
     .container div img {
@@ -36,13 +47,5 @@ header {
   .container .details img {
     height: 120px;
     padding: 30px; }
-
-.alertBox {
-  background-color: #ff7d7d;
-  color: #f9fd16;
-  border: 2px solid black;
-  font-size: 12px;
-  padding: 10px;
-  margin: 10px; }
 
 /*# sourceMappingURL=style.css.map */

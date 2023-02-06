@@ -1,10 +1,11 @@
 $fontStyle: monospace;
 $headerBackgroundColor: rgb(0, 0, 0);
+$h1fontSize: 32px;
 $titleColor: rgb(255, 255, 255);
 $bodyBackgroundColor: rgb(134, 134, 134);
-$alertBackgroundColor: rgb(255, 125, 125);
+$alertBackgroundColor: rgb(255, 64, 64);
 $alertColor: rgb(249, 253, 22);
-$paragraphFontSize: 18px;
+$paragraphFontSize: 22px;
 $containerBackgroundColor: rgb(212, 212, 212);
 $containerMargin: 20px;
 $containerHeight: auto;
@@ -17,9 +18,13 @@ $divPadding: 30px;
     background-color: $backgroundColor;
     color: $color;
     border: 2px solid black;
-    font-size: $fontSize;
     padding: $padding;
     margin: $margin;
+    font-weight: bold;
+
+    p {
+        font-size: $fontSize;
+    }
 }
 
 @mixin containerDivsBox($backgroundColor, $margin, $padding, $borderSize, $borderColor) {
@@ -39,6 +44,7 @@ $divPadding: 30px;
 
 h1 {
     text-align: center;
+    font-size: $h1fontSize;
 }
 
 p {
@@ -66,6 +72,11 @@ header {
         @include containerDivsBox($containerDivsBackgroundColor, $containerMargin, 30px, 2px, black);
         text-align: center;
 
+        .alertBox {
+            @include alertTextBox($alertBackgroundColor, $alertColor, ($paragraphFontSize - 4), 10px, 20px);
+            margin-top: 50px;
+        }
+
         h1 {
             padding-bottom: 50px;
         }
@@ -81,8 +92,4 @@ header {
         padding: 30px;
     }
 
-}
-
-.alertBox {
-    @include alertTextBox($alertBackgroundColor, $alertColor, 12px, 10px, 10px)
 }
