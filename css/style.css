@@ -37,4 +37,12 @@ header {
     height: 120px;
     padding: 30px; }
 
+.alertBox {
+  background-color: #ff7d7d;
+  color: #f9fd16;
+  border: 2px solid black;
+  font-size: 12px;
+  padding: 10px;
+  margin: 10px; }
+
 /*# sourceMappingURL=style.css.map */

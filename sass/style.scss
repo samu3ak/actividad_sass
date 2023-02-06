@@ -13,11 +13,13 @@ $divPadding: 30px;
 
 // Mixins
 
-@mixin alertTextBox($backgroundColor, $color, $fontSize) {
+@mixin alertTextBox($backgroundColor, $color, $fontSize, $margin, $padding) {
     background-color: $backgroundColor;
     color: $color;
     border: 2px solid black;
     font-size: $fontSize;
+    padding: $padding;
+    margin: $margin;
 }
 
 @mixin containerDivsBox($backgroundColor, $margin, $padding, $borderSize, $borderColor) {
@@ -74,9 +76,13 @@ header {
         }
     }
 
-    .details img{
+    .details img {
         height: 120px;
         padding: 30px;
     }
 
+}
+
+.alertBox {
+    @include alertTextBox($alertBackgroundColor, $alertColor, 12px, 10px, 10px)
 }
