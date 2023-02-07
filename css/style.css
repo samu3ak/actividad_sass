@@ -1,31 +1,54 @@
 * {
-  margin: 0px;
+  margin: 0 auto;
+  padding: 0px;
   font-family: monospace; }
+
+body {
+  background-image: url("../images/bodyWallpaper.png");
+  backdrop-filter: blur(2px); }
 
 h1 {
   text-align: center;
   font-size: 32px; }
 
 p {
-  font-size: 22px; }
-
-body {
-  background-color: #868686; }
+  font-size: 22px;
+  font-weight: bold; }
 
 header {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 30px; }
+  padding: 30px;
+  border: 1px solid white; }
+  header .title_logo {
+    width: 500px; }
+  header a {
+    background-color: black;
+    border: 2px solid white;
+    padding: 6px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    width: 500px;
+    margin-top: 65px; }
+  header a:hover {
+    background-color: #3b3b3b; }
+  header .a_steam {
+    float: left; }
+  header .a_wiki {
+    float: right; }
 
 .container {
-  background-color: #d4d4d4;
   padding: 30px;
-  margin: 20px;
+  margin: 15px;
   height: auto; }
   .container div {
+    opacity: 85%;
+    transition: opacity 0.5s;
     background-color: white;
-    margin: 20px;
+    margin: 15px;
     border: 2px solid black;
     padding: 30px;
     text-align: center; }
@@ -42,8 +65,11 @@ header {
     .container div h1 {
       padding-bottom: 50px; }
     .container div img {
-      height: 500px;
+      height: 400px;
       padding: 50px; }
+  .container div:hover {
+    opacity: 95%;
+    transition: opacity 0.5s; }
   .container .details img {
     height: 120px;
     padding: 30px; }

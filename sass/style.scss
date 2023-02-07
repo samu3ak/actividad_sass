@@ -7,7 +7,7 @@ $alertBackgroundColor: rgb(255, 64, 64);
 $alertColor: rgb(249, 253, 22);
 $paragraphFontSize: 22px;
 $containerBackgroundColor: rgb(212, 212, 212);
-$containerMargin: 20px;
+$containerMargin: 15px;
 $containerHeight: auto;
 $containerDivsBackgroundColor: rgb(255, 255, 255);
 $divPadding: 30px;
@@ -34,12 +34,29 @@ $divPadding: 30px;
     padding: $padding;
 }
 
+@mixin linkButton($backgroundColor, $borderSize, $borderColor, $padding, $fontSize) {
+    background-color: $backgroundColor;
+    border: $borderSize solid $borderColor;
+    padding: $padding;
+    font-size: $fontSize;
+}
+
+@mixin simpleBorder($color) {
+    border: 1px solid $color;
+}
+
 
 // CSS
 
 * {
-    margin: 0px;
+    margin: 0 auto;
+    padding: 0px;
     font-family: $fontStyle;
+}
+
+body {
+    background-image: url("../images/bodyWallpaper.png");
+    backdrop-filter: blur(2px);
 }
 
 h1 {
@@ -49,10 +66,7 @@ h1 {
 
 p {
     font-size: $paragraphFontSize;
-}
-
-body {
-    background-color: $bodyBackgroundColor;
+    font-weight: bold;
 }
 
 header {
@@ -60,15 +74,42 @@ header {
     color: $titleColor;
     text-align: center;
     padding: $divPadding;
+    @include simpleBorder(rgb(255, 255, 255));
+
+    .title_logo {
+        width: 500px;
+    }
+
+    a {
+        @include linkButton(rgb(0, 0, 0), 2px, rgb(255, 255, 255), 6px, 16px);
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        width: 500px;
+        margin-top: 65px;
+    }
+
+    a:hover {
+        background-color: rgb(59, 59, 59);
+    }
+
+    .a_steam {
+        float: left;
+    }
+
+    .a_wiki {
+        float: right;
+    }
 }
 
 .container {
-    background-color: $containerBackgroundColor;
     padding: $divPadding;
     margin: $containerMargin;
     height: $containerHeight;
 
     div {
+        opacity: 85%;
+        transition: opacity 0.5s;
         @include containerDivsBox($containerDivsBackgroundColor, $containerMargin, 30px, 2px, black);
         text-align: center;
 
@@ -82,9 +123,14 @@ header {
         }
 
         img {
-            height: 500px;
+            height: 400px;
             padding: 50px;
         }
+    }
+
+    div:hover {
+        opacity: 95%;
+        transition: opacity 0.5s;
     }
 
     .details img {
