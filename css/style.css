@@ -62,16 +62,40 @@ header {
       margin-top: 50px; }
       .container div .alertBox p {
         font-size: 18px; }
-    .container div h1 {
+    .container div h1,
+    .container div h2,
+    .container div h3,
+    .container div h4 {
       padding-bottom: 50px; }
-    .container div img {
+    .container div .isaacWallpaper {
       height: 400px;
       padding: 50px; }
     .container div:hover {
       opacity: 95%;
       transition: opacity 0.5s; }
+    .container div h3 {
+      padding-top: 50px; }
   .container .details img {
     height: 120px;
     padding: 30px; }
+
+table {
+  width: 100%; }
+  table img {
+    width: 50px; }
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+  background-color: white; }
+
+h2 {
+  font-size: 22px; }
+
+h3 {
+  font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */

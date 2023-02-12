@@ -52,6 +52,8 @@ $titleLogo: 300px;
     height: $containerHeight;
 }
 
+@mixin tableStyle() {}
+
 // Functions
 
 @function partir($divisor, $dividendo) {
@@ -132,11 +134,14 @@ header {
             margin-top: 50px;
         }
 
-        h1 {
+        h1,
+        h2,
+        h3,
+        h4 {
             padding-bottom: 50px;
         }
 
-        img {
+        .isaacWallpaper {
             height: 400px;
             padding: 50px;
         }
@@ -145,6 +150,10 @@ header {
             opacity: 95%;
             transition: opacity 0.5s;
         }
+
+        h3{
+            padding-top: 50px;
+        }
     }
 
     .details img {
@@ -152,4 +161,36 @@ header {
         padding: 30px;
     }
 
+}
+
+table {
+    width: 100%;
+    img{
+        width: 50px;
+    }
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+    background-color: white;
+}
+
+// Loops
+
+$font-size: (
+    24px,
+    22px,
+    20px,
+    18px
+);
+
+@for $i from 2 to 4 {
+
+    h#{$i} {
+        font-size: nth($font-size, $i);
+    }
 }
