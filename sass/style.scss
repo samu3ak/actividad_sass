@@ -11,6 +11,7 @@ $containerMargin: 15px;
 $containerHeight: auto;
 $containerDivsBackgroundColor: rgb(255, 255, 255);
 $divPadding: 30px;
+$titleLogo: 300px;
 
 // Mixins
 
@@ -45,6 +46,21 @@ $divPadding: 30px;
     border: 1px solid $color;
 }
 
+@mixin containerStlye($divPadding, $containerMargin, $containerHeight) {
+    padding: $divPadding;
+    margin: $containerMargin;
+    height: $containerHeight;
+}
+
+// Functions
+
+@function partir($divisor, $dividendo) {
+    @return ($divisor/$dividendo);
+}
+
+@function sumar($num1, $num2) {
+    @return ($num1+$num2);
+}
 
 // CSS
 
@@ -77,7 +93,7 @@ header {
     @include simpleBorder(rgb(255, 255, 255));
 
     .title_logo {
-        width: 500px;
+        width: sumar($titleLogo, 200);
     }
 
     a {
@@ -86,11 +102,11 @@ header {
         font-weight: bold;
         text-decoration: none;
         width: 500px;
-        margin-top: 65px;
-    }
+        margin-top: partir(122px, 2);
 
-    a:hover {
-        background-color: rgb(59, 59, 59);
+        &:hover {
+            background-color: rgb(59, 59, 59);
+        }
     }
 
     .a_steam {
@@ -103,9 +119,7 @@ header {
 }
 
 .container {
-    padding: $divPadding;
-    margin: $containerMargin;
-    height: $containerHeight;
+    @include containerStlye($divPadding, $containerMargin, $containerHeight);
 
     div {
         opacity: 85%;
@@ -126,11 +140,11 @@ header {
             height: 400px;
             padding: 50px;
         }
-    }
 
-    div:hover {
-        opacity: 95%;
-        transition: opacity 0.5s;
+        &:hover {
+            opacity: 95%;
+            transition: opacity 0.5s;
+        }
     }
 
     .details img {

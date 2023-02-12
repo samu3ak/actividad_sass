@@ -32,9 +32,9 @@ header {
     font-weight: bold;
     text-decoration: none;
     width: 500px;
-    margin-top: 65px; }
-  header a:hover {
-    background-color: #3b3b3b; }
+    margin-top: 61px; }
+    header a:hover {
+      background-color: #3b3b3b; }
   header .a_steam {
     float: left; }
   header .a_wiki {
@@ -67,9 +67,9 @@ header {
     .container div img {
       height: 400px;
       padding: 50px; }
-  .container div:hover {
-    opacity: 95%;
-    transition: opacity 0.5s; }
+    .container div:hover {
+      opacity: 95%;
+      transition: opacity 0.5s; }
   .container .details img {
     height: 120px;
     padding: 30px; }
